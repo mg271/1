@@ -147,7 +147,6 @@ const Preloader = /** @constructor */ function () { // eslint-disable-line no-un
 		return new Response(new ReadableStream({
 			start: function (controller) {
 				onloadprogress(reader, controller).then(function () {
-					controller.close();
 				});
 			},
 		}), { headers: response.headers });
